@@ -35,7 +35,6 @@
 #include <string.h>
 #include <time.h>
 
-#include "bignum.h"
 #include "bignum_init.h"
 
 /* ------------------------------------------------------------------ */

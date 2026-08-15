@@ -36,7 +36,6 @@
 #include <time.h>
 #include <pthread.h>
 
-#include "bignum.h"
 #include "bignum_init.h"
 
 /* ------------------------------------------------------------------ */

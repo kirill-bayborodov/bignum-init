@@ -19,12 +19,13 @@
  *   - rev. 0 (2026‑08‑15): первая версия расширенных тестов.
  */
 
-#include "bignum_init.h"   /* объявление bignum_init() и статуса */
 #include "bignum.h"        /* тип bignum_t и BIGNUM_CAPACITY */
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <assert.h>
+
+#include "bignum_init.h"   /* объявление bignum_init() и статуса */
 
 /* ------------------------------------------------------------------ */
 /*  Вспомогательная проверка: полностью обнулённая структура            */

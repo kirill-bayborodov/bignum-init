@@ -14,7 +14,6 @@
  */
 
 #include "bignum_init.h"   /* объявление bignum_init() и типы статуса */
-#include "bignum.h"        /* определение bignum_t и BIGNUM_CAPACITY */
 #include <assert.h>
 #include <stdio.h>
 #include <string.h>

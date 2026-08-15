@@ -20,14 +20,14 @@
  *   - rev. 1 (2026‑08‑15): первая версия MT‑теста.
  */
 
-#include "bignum_init.h"
-#include "bignum.h"
 #include <stdio.h>
 #include <pthread.h>
 #include <assert.h>
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
+
+#include "bignum_init.h"
 
 #define NUM_THREADS      8
 #define NUM_ITERATIONS  1000   /* количество повторных инициализаций в каждом потоке */

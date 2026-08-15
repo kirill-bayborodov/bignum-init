@@ -18,11 +18,11 @@
  *   - rev. 0 (2026-08-15): Первая версия тестов.
  */
 
-#include "bignum_init.h"      /* объявление bignum_init() и типы */
-#include "bignum.h"           /* определение bignum_t и BIGNUM_CAPACITY */
 #include <stdio.h>
 #include <string.h>
 #include <assert.h>
+
+#include "bignum_init.h"      /* объявление bignum_init() и типы */
 
 /* ------------------------------------------------------------------ */
 /*  Вспомогательная проверка: все слова == 0 и len == 0               */

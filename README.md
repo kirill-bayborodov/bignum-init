@@ -1,12 +1,12 @@
-# bignum-template
+# bignum-init
 
-[![C/ASM CI](https://github.com/kirill-bayborodov/bignum-template/actions/workflows/ci.yml/badge.svg)](https://github.com/kirill-bayborodov/bignum-template/actions/workflows/ci.yml)
-[![GitHub release (latest by date)](https://img.shields.io/github/v/release/kirill-bayborodov/bignum-template?label=release)](https://github.com/kirill-bayborodov/bignum-template/releases/latest)
+[![C/ASM CI](https://github.com/kirill-bayborodov/bignum-init/actions/workflows/ci.yml/badge.svg)](https://github.com/kirill-bayborodov/bignum-init/actions/workflows/ci.yml)
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/kirill-bayborodov/bignum-init?label=release)](https://github.com/kirill-bayborodov/bignum-init/releases/latest)
 
 
 
-`bignum-template` is a high-performance, standalone module for performing a logical template on an arbitrary-precision integer (`bignum_t`).
-A highly optimized x86-64 assembly implementation of a bignum template operation, designed for performance-critical applications. 
+`bignum-init` is a high-performance, standalone module for performing a initialisation of value on an arbitrary-precision integer (`bignum_t`).
+A highly optimized x86-64 assembly implementation of a bignum initialisation operation, designed for performance-critical applications. 
 
 ## Distribution
 
@@ -29,18 +29,17 @@ Also available as a standalone distribution.
 
 To clone the repository with its submodule, use:
 ```bash
-git clone --recurse-submodules https://github.com/kirill-bayborodov/bignum-template.git
+git clone --recurse-submodules https://github.com/kirill-bayborodov/bignum-init.git
 ```
 ## API
 
-The library provides a single function, declared in `include/bignum_template.h`.
+The library provides a single function, declared in `include/bignum_init.h`.
 
 ```c
-bignum_status_t bignum_template(bignum_t* num, size_t template );
+bignum_init_status_t bignum_init(bignum_t* x);
 ```
--   **`num`**: A pointer to the `bignum_t` structure to be shifted.
--   **`template`**: The number of bits to template.
--   **Returns**: A `bignum_status_t` enum (`BIGNUM_SUCCESS`, `BIGNUM_ERROR_NULL_ARG`, `BIGNUM_ERROR_OVERFLOW`).
+-   **`x`**: A pointer to the `bignum_t` structure to be shifted.
+-   **Returns**: A `bignum_init_status_t` enum (`BIGNUM_INIT_SUCCESS`, `BIGNUM_INIT_ERROR_NULL_ARG`).
 
 ## How to Build, Test, Install and Use
 
@@ -91,24 +90,24 @@ make clean
 
 ## How to Use
 
-This project produces an object file (`bignum_template.o`) which you can link with your own application.
+This project produces an object file (`bignum_init.o`) which you can link with your own application.
 
 **1. Clone the repository with submodules:**
 ```bash
-git clone --recurse-submodules https://github.com/kirill-bayborodov/bignum-template.git
-cd bignum-template
+git clone --recurse-submodules https://github.com/kirill-bayborodov/bignum-init.git
+cd bignum-init
 ```
 
 **2. Build the object file:**
 ```bash
 make build
 ```
-The output will be located at `build/bignum_template.o`.
+The output will be located at `build/bignum_init.o`.
 
 **3. Link with your application:**
 When compiling your project, include the object file and specify the include paths for the headers.
 ```bash
-gcc your_app.c build/bignum_template.o -I./include -I./libs/bignum-common/include -o your_app -no-pie
+gcc your_app.c build/bignum_init.o -I./include -I./libs/bignum-core/include -o your_app -no-pie
 ```	
 
 ## Contributing
